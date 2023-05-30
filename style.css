@@ -1,0 +1,58 @@
+body {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.alert {
+  width: 20vw;
+
+  position: absolute !important;
+  right: 3rem;
+  top: 6rem;
+}
+
+.status-active,
+.status-inactive {
+  position: relative;
+  width: 30%;
+}
+
+.status-active::after {
+  content: '';
+  display: block;
+  clear: both;
+
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100rem;
+
+  background: #198754;
+}
+.status-inactive::after {
+  content: '';
+  display: block;
+  clear: both;
+
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100rem;
+
+  background: #dc3545;
+}
